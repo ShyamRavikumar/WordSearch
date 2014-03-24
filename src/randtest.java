@@ -1,6 +1,6 @@
 import java.util.Random;
 
-
+/*
 public class randtest {
 
 	
@@ -9,4 +9,4 @@ public class randtest {
 		
 	}
 
-}
+}*/
