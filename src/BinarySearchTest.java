@@ -41,7 +41,7 @@ public class BinarySearchTest {
 			index=(index>=0)?index:-1;
 				if(index!=-1){
 					
-					bw.append(s1.get(index)+"\n");
+					bw.append(s1.get(index).toUpperCase()+"\n");
 				}
 			}
 		
