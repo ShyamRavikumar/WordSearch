@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+/**
+ * @deprecated Not in use since the dictionary has been implemented.Exists only for backup.
+ */
+
+
 
 
 public class dictfilecreator {
@@ -17,10 +22,11 @@ public class dictfilecreator {
 	      while((s=br.readLine())!=null){
 	    	  d=s.charAt(0);t=s.length();
 	    	  if(t<=10){
-	    		  aw = (new FileWriter("./src/dictionary/"+d+t+".txt",true));
-	    		  aw.write(s+"\n");
+	    		  //Commented to avoid mishaps
+	    		  //aw = (new FileWriter("./src/dictionary/"+d+t+".txt",true));
+	    		  //aw.write(s+"\n");
 	    		  
-	    		  aw.close();
+	    		  //aw.close();
 	    	  
 	    	  }
 	      }
