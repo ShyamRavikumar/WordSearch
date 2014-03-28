@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class WordsFromArrays {
 	public static Map<String,String> mp =new HashMap<>();
 	static int searchchoice;
 	public static List<String> s1=new ArrayList<>();
-	
+	public static int count=0;
 	static int siz;
+	public static long endtime,starttime;
+	
 	
 	/**
 	 * @param list Char Array to be used as the input matrix
@@ -114,9 +117,9 @@ public class WordsFromArrays {
 	}
 	public static void main(String[] args) throws Exception{
 	//Determine Search Algorithm
-		DetermineSearchAlgorithm.determine();
+		int cho=1;
 		
-	//Get the input matrix
+//Get the input matrix
 		BufferedReader br = new BufferedReader(new FileReader("./src/dictfiles/Example2.txt"));
 		siz=br.readLine().toString().length();
 		br.close();
@@ -127,10 +130,21 @@ public class WordsFromArrays {
 		while((s=br.readLine())!=null)
 			list[i++]=s.toCharArray();
 		br.close();
-	//Call combinationcreator() and pass the matrix input to create all combinations
-		combinationcreator(list);
-	//SORT THE RESULT AND PRINT THE STORE THE RESULT
-		SortTheResult.sortres();
+		while(cho==1){
+			
+			count++;
+			DetermineSearchAlgorithm.determine();
+			
+			
+	//	Call combinationcreator() and pass the matrix input to create all combinations
+			combinationcreator(list);
+	//	SORT THE RESULT AND PRINT THE STORE THE RESULT
+			SortTheResult.sortres();
+			endtime = System.currentTimeMillis();
+			System.out.println("Time taken to execute : " + (endtime-starttime)+" ms");
+			System.out.println("Do you want to execute again?? (1/0) : ");
+			cho = new Scanner(System.in).nextInt();
+		}
 	}	
 
 }
