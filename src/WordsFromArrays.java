@@ -1,22 +1,25 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WordsFromArrays {
+	public static Map<String,String> mp =new HashMap<>();
+	static int searchchoice;
+	public static List<String> s1=new ArrayList<>();
+	
 	static int siz;
 	
 	/**
-	 * @param list Char Array to be worked on
+	 * @param list Char Array to be used as the input matrix
 	 * Creates all possible word choices in each direction for each letter in array.
 	 * Uses brute force atm
 	 */
 	static void combinationcreator(char[][] list){
 		int i=0,j=0,i1,k;
-		
+		String[] b;
 		List<String> a=new ArrayList<String>();
 		char[] c = new char[siz];
 		for(i=0;i<=siz-1;i++){
@@ -85,38 +88,35 @@ public class WordsFromArrays {
 						}
 						a.add(String.valueOf(c).trim());
 					}
-		
-					
-					System.out.println(a.toString());
-		
-					
-					
-					String[] b =new String[a.size()];
+					b =new String[a.size()];
 					
 				for(int l=0;l<a.size();l++){
 						b[l]=a.get(l).toString();
 						
 				}
-					
-					
-					
-		//DONE
-					//PASS THE STRING a TO THE CHECKER
-					try{
-						BinarySearchTest.binsearch(b);
+					try
+					{
+						if(searchchoice==1)
+							BinarySearchTest.binsearch(b);
+						
+						else
+							HashMapTest.hashsearch(b);
 					}
-					catch(Exception e){
+					catch(Exception e)
+					{
 						e.printStackTrace();
 					}
 				k++;
 				}
-				
 			}
 		}
 		System.out.println("Program Execution Finished");
 	}
 	public static void main(String[] args) throws Exception{
-		// TODO Check each and every possible scenario for each letter
+	//Determine Search Algorithm
+		DetermineSearchAlgorithm.determine();
+		
+	//Get the input matrix
 		BufferedReader br = new BufferedReader(new FileReader("./src/dictfiles/Example2.txt"));
 		siz=br.readLine().toString().length();
 		br.close();
@@ -124,30 +124,13 @@ public class WordsFromArrays {
 		char[][] list=new char[siz][siz];
 		String s = new String();
 		int i=0;
-		while((s=br.readLine())!=null){
-			
-			list[i++]=s.toCharArray();
-			
-		}
-		combinationcreator(list);
-		//Check
-		/*
-		for(i=0;i<siz;i++){
-			System.out.println(Arrays.toString(list[i]).replace(" ", "-"));
-			
-		}*/
-		br.close();
-		br = new BufferedReader(new FileReader("./src/dictfiles/searchoutput.txt"));
-		List<String> a = new ArrayList<String>();
-		
-		i=0;
 		while((s=br.readLine())!=null)
-			a.add(s);
-		Collections.sort(a);
-		BufferedWriter bw=new BufferedWriter(new FileWriter("./src/dictfiles/searchoutput.txt"));
-		for(i=0;i<a.size();i++)
-			bw.write(a.get(i)+"\n");
-		bw.close();br.close();
+			list[i++]=s.toCharArray();
+		br.close();
+	//Call combinationcreator() and pass the matrix input to create all combinations
+		combinationcreator(list);
+	//SORT THE RESULT AND PRINT THE STORE THE RESULT
+		SortTheResult.sortres();
 	}	
 
 }
