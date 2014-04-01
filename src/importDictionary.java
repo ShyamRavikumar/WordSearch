@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /*
- * imports the dictionary into the hashmap mp if hashmap is selected.
+ * imports the dictionary into the hashmap mp if hashmap is selected ..
  */
 public class importDictionary {
 

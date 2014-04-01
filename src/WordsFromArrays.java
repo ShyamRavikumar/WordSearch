@@ -8,7 +8,7 @@ import java.util.Scanner;
 /*
  * The main file which calls all other functions..
  * Asks the user if he wants to use Binary search, or a HashMap search by calling DetermineSearchAlgorithm.java
- * 
+ * Calls importDictionary and DetermineSearchAlgorithm
  * 
  */
 public class WordsFromArrays {

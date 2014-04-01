@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
+/*
+ * Sorts the resultant file in the end after the execution is finished, and arranges in ascending order.
+ */
 public class SortTheResult {
 	public static void sortres(){
 		try{

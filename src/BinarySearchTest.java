@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.util.Collections;
 
 /*
- * Search the files in the list list with the dictionary using binary search algorithm.
+ * Search the files in the list list with the dictionary using binary search algorithm..
  */
 public class BinarySearchTest {
 	static public void binsearch(String[] list) throws Exception{
