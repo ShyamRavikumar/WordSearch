@@ -2,22 +2,13 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Collections;
 
-
+/*
+ * Search the files in the list list with the dictionary using binary search algorithm.
+ */
 public class BinarySearchTest {
 	static public void binsearch(String[] list) throws Exception{
 	
-	//Remove null elements from input list	.NOT REQUIRED ATM
-		/*
-		List<String> listtemp = new ArrayList<String>();
-
-	    for(String s : list) {
-	       if(s != null && s.length() > 0) {
-	          listtemp.add(s);
-	       }
-	    }
-
-	    list = listtemp.toArray(new String[listtemp.size()]);
-	  */  
+	
 	//Create File Handlers and variables
 	    
 	    BufferedWriter bw = new BufferedWriter(new FileWriter("./src/dictfiles/searchoutput.txt",true));
@@ -39,19 +30,5 @@ public class BinarySearchTest {
 		bw.close();
 		
 	}
-	/**
-	 * @deprecated Test Function not in use since found working
-	 */
-	/*
-	public static void main(String[] args){
-		String[] a ={"born","baby","boom"};
-		
-		try{binsearch(a);
-		
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-	}
-	*/
+	
 }

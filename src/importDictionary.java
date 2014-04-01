@@ -2,7 +2,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-
+/*
+ * imports the dictionary into the hashmap mp if hashmap is selected.
+ */
 public class importDictionary {
 
 	public static void imp(){

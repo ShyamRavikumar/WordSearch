@@ -1,7 +1,10 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
-
+/*
+ * Compares the words in the array list with the dictionary if hashsearch is chosen, and if the word exists, the word is written
+ * into the file searchoutput.txt
+ */
 public class HashMapTest {
 	static public void hashsearch(String[] list) throws Exception{
 		

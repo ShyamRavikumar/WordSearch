@@ -1,7 +1,11 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
-
+/*
+ * Gives the user choice between binary search, hash map.
+ * If hashmap is selected, importDictionary.java is called.
+ * If Binary search is selected, the dictionary words are added into an ArrayList s1.
+ */
 
 public class DetermineSearchAlgorithm {
 	public static void determine(){

@@ -3,7 +3,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
- * @deprecated Not in use since the dictionary has been implemented.Exists only for backup.
+ * @deprecated Not in use since the dictionary has been implemented.Exists only for backup to create
+ * the dictionary if lost.
  */
 
 

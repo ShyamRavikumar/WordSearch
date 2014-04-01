@@ -5,7 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-
+/*
+ * The main file which calls all other functions..
+ * Asks the user if he wants to use Binary search, or a HashMap search by calling DetermineSearchAlgorithm.java
+ * 
+ * 
+ */
 public class WordsFromArrays {
 	public static Map<String,String> mp =new HashMap<>();
 	static int searchchoice;
